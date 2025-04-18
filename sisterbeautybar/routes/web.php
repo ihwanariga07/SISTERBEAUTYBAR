@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::fallback (function () {
-//     return view('notfound');
-// });
+Route::fallback (function () {
+    return view('notfound');
+});
 
 
 /*
@@ -24,11 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// use App\Http\Controllers\HomeController;
-// Route::get('/', [HomeController::class, 'index']);
+// routes/web.php
 
+use App\Http\Controllers\HomeController;
 
-// use App\Http\Controllers\AboutController;
-// Route::get('/about', [AboutController::class, 'index'])->name('about');
-
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
