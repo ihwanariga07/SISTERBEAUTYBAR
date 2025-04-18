@@ -26,6 +26,7 @@ Route::get('/', function () {
 
 // routes/web.php
 
+
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

@@ -5,42 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SisterGlow - Your Beauty Oasis</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5eadd;
+        }
+        .btn-book {
+            background-color: #914424;
+            color: white;
+        }
+        .btn-book:hover {
+            background-color: #7a331a;
+        }
+    </style>
 </head>
-<body class="bg-[#f5eadd] font-sans min-h-screen">
+<body>
 
-    <nav class="flex justify-between items-center p-6">
-        <div class="text-2xl font-bold">SISTERGLOW</div>
-        <ul class="flex space-x-6 text-lg">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#" class="hover:underline">Services</a></li>
-            <li><a href="#" class="hover:underline">Products</a></li>
-            <li><a href="#" class="hover:underline">About</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light px-4">
+        <a class="navbar-brand fw-bold" href="#">SISTERGLOW</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
-        <div class="space-y-6">
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-                Your Beauty <br><span class="text-6xl">Oasis</span>
-            </h1>
-            <p class="text-lg text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex space-x-4">
-                <a href="#" class="bg-[#914424] text-white py-3 px-6 rounded shadow hover:bg-[#7a331a] transition">
-                    Book Now
-                </a>
-                <a href="#" class="border border-black py-3 px-6 rounded hover:bg-gray-100 transition">
-                    Shop Products
-                </a>
+    <!-- Hero Section -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h1 class="display-4 fw-bold">Your Beauty <br><span class="display-5">Oasis</span></h1>
+                <p class="lead text-secondary mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#" class="btn btn-book px-4 py-2 rounded">Book Now</a>
+                    <a href="#" class="btn btn-outline-dark px-4 py-2 rounded">Shop Products</a>
+                </div>
             </div>
-        </div>
-        <div class="mt-10 md:mt-0">
-            <img src="{{ asset('images/model.png') }}" alt="Beauty Model" class="rounded-xl shadow-lg">
+
+            <!-- Image -->
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('images/model.png') }}" alt="Beauty Model" class="img-fluid rounded shadow">
+            </div>
         </div>
     </div>
 
